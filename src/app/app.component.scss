@@ -1,14 +1,28 @@
 @import "../assets/scss/_variables.scss";
 @import "../assets/scss/stylish-portfolio.scss";
 
-.masthead {
-    color: #fff;
-}
-
 .sidebar-wrapper {
     &.active {
         .sidebar-nav {
             background-color: $primary;
         }
+    }
+}
+
+.service-icon {
+    .fa {
+        &.fa-stack-trophy {
+            color: gold;
+        }
+        &.fa-stack-percent {
+            line-height: 7.25em;
+            font-size: .25em;
+        }
+    }
+}
+
+.footer {
+    .fa-2x {
+        font-size: 1.5em;
     }
 }
