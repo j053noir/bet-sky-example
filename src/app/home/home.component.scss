@@ -1,0 +1,44 @@
+@import "../../assets/scss/_variables.scss";
+@import "../../assets/scss/stylish-portfolio.scss";
+
+.masthead {
+    h1, h3 {
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    }
+}
+
+.service-icon {
+    .fa {
+        &.fa-2x {
+            line-height: 1.5em;
+            &.fa-plus {
+                line-height: 1.65em;
+            }
+        }
+        &.fa-percent {
+            color: gold;
+        }
+        &.fa-stack-trophy {
+            font-size: 1.5em;
+            color: gold;
+        }
+        &.fa-stack-users {
+            font-size: .5em;
+            line-height: 1.75em;
+        }
+    }
+}
+
+.callout {
+    .btn-primary {
+        background-color: #000 !important;
+        border: 1px solid #fff !important;
+    }
+}
+
+.footer {
+    .fa-2x {
+        font-size: 1.5em;
+    }
+}
