@@ -3,6 +3,7 @@ import { Bet } from '../bet.model';
 import { BetService } from '../bet.service';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import * as alertify from 'alertifyjs';
 
 @Component({
   selector: 'app-bet-details',
@@ -31,4 +32,17 @@ export class BetDetailsComponent implements OnInit {
     return new Array(pages).fill(1);
   }
 
+  onPlaceBet() {
+    alertify.prompt('Colocar apuesta', '¿Cuanto es el valor que desea apostar?', ''
+      , function (evt, value: number) {
+        if (!isNaN(value) && value >= 2430) {
+          alertify.success('Usted ingreso: ' + value, + ' será redirigido a la plataforma de pagos...');
+        } else if (isNaN(value)) {
+          alertify.error('Valor no es valido');
+        } else {
+          alertify.error('Valor debe ser mayor a 2430');
+        }
+      }
+      , function () { });
+  }
 }

@@ -6,7 +6,10 @@
     <p class="card-text" [innerHtml]="bet.description"></p>
     <span>
       <i class="fa fa-star" *ngFor="let star of getStarsArray(bet.calification)"></i>
-    </span>
+    </span>    
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-primary" (click)="onPlaceBet()">Apostar</button>
   </div>
 </div>
 <!-- /.card -->
