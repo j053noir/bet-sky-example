@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BetsComponent } from './bets/bets.component';
-import { BetListComponent } from './bet-list/bet-list.component';
-import { BetCreateComponent } from './bet-create/bet-create.component';
-import { BetDetailsComponent } from './bet-details/bet-details.component';
+import { BetListComponent } from './bets/bet-list/bet-list.component';
 import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
+import { BetDetailsComponent } from './bets/bet-details/bet-details.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -15,8 +14,6 @@ const appRoutes: Routes = [
         component: BetsComponent,
         children: [
             { path: 'list', component: BetListComponent },
-            { path: 'create', component: BetCreateComponent },
-            { path: 'edit/:id', component: BetCreateComponent },
             { path: 'details/:id', component: BetDetailsComponent },
             { path: '', component: BetListComponent }
         ]

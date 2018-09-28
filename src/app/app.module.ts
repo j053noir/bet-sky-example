@@ -3,24 +3,26 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BetsComponent } from './bets/bets.component';
-import { BetListComponent } from './bet-list/bet-list.component';
-import { BetCreateComponent } from './bet-create/bet-create.component';
-import { BetDetailsComponent } from './bet-details/bet-details.component';
+import { BetListComponent } from './bets/bet-list/bet-list.component';
 import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { BetItemComponent } from './bets/bet-list/bet-item/bet-item.component';
+import { FilterPipe } from './shared/pipes/filter.pipe';
+import { BetDetailsComponent } from './bets/bet-details/bet-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BetsComponent,
     BetListComponent,
-    BetCreateComponent,
-    BetDetailsComponent,
     SignInComponent,
     SignUpComponent,
-    HomeComponent
+    HomeComponent,
+    BetItemComponent,
+    FilterPipe,
+    BetDetailsComponent
   ],
   imports: [
     AppRoutingModule,

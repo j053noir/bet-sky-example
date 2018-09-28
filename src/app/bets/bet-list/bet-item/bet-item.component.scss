@@ -1,0 +1,21 @@
+@import "../../../../assets/scss/variables";
+@import '../../../../assets/scss/bootstrap-overrides';
+
+.card {
+  .card-img-top {
+    cursor: pointer;
+  }
+
+  .card-title {
+    cursor: pointer;
+    color: $primary;
+  }
+
+  h5 {
+    color: green;
+  }
+
+  .card-footer {
+    color: $secondary;
+  }
+}

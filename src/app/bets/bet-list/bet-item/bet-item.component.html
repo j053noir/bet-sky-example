@@ -1,0 +1,15 @@
+<div class="card h-100">
+  <a [routerLink]="['/bets/details/', item.id]"><img class="card-img-top" [src]="item.image" alt=""></a>
+  <div class="card-body">
+    <h4 class="card-title">
+      <a [routerLink]="['/bets/details/', item.id]">{{ item.name }}</a>
+    </h4>
+    <h5 title="Apuesta minima">desde ${{ item.minbet }}</h5>
+    <p class="card-text" [innerHTML]="item.description"></p>
+  </div>
+  <div class="card-footer">
+    <small>
+      <i class="fa fa-star" *ngFor="let star of getStarsArray(item.calification)"></i>
+    </small>
+  </div>
+</div>

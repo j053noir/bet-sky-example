@@ -1,7 +1,11 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/bootstrap-overrides';
 
 .wrapper {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  color: $primary;
 }
 
 .form-signin {
@@ -9,13 +13,16 @@
   max-width: 330px;
   padding: 15px;
   margin: auto;
+
   h1 {
-	  color: #fff;
+    color: $primary;
   }
+
   .checkbox {
-	font-weight: 400;
-	color: #fff;
+    font-weight: 400;
+    color: $primary;
   }
+
   .form-control {
     position: relative;
     //Instead of the line below you could use @include box-sizing($bs)
@@ -23,10 +30,12 @@
     height: auto;
     padding: 10px;
     font-size: 16px;
+
     &:focus {
       z-index: 2;
     }
   }
+
   input[type="email"] {
     margin-bottom: -1px;
     //Instead of the line below you could use @include border-bottom-right-radius($radius)
@@ -34,6 +43,7 @@
     //Instead of the line below you could use @include border-bottom-left-radius($radius)
     border-bottom-left-radius: 0;
   }
+
   input[type="password"] {
     margin-bottom: 10px;
     //Instead of the line below you could use @include border-top-left-radius($radius)

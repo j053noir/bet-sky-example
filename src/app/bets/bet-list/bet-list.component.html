@@ -1,0 +1,29 @@
+<div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li [ngClass]="{ 'active': this.carouselIndex == 0}" (click)="onSelectCarouselIndex(0)"></li>
+    <li [ngClass]="{ 'active': this.carouselIndex == 1}" (click)="onSelectCarouselIndex(1)"></li>
+    <li [ngClass]="{ 'active': this.carouselIndex == 2}" (click)="onSelectCarouselIndex(2)"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item" *ngFor="let item of carouselItems;let i = index" [ngClass]="{ 'active': this.carouselIndex == i}">
+      <img class="d-block img-fluid" src="{{item.image}}" alt="{{item.id}}">
+    </div>
+  </div>
+  <a class="carousel-control-prev" (click)="onPreviousCarousel()" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" (click)="onNextCarousel()" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="row">
+
+  <div class="col-lg-4 col-md-6 mb-4" *ngFor="let bet of bets | filter:filterBy">
+    <app-bet-item [item]="bet"></app-bet-item>
+  </div>
+
+</div>
+<!-- /.row -->
